@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/glasses.png" type="image" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Carrinho</title>
+  </head>
+  <body>
+    <div class="header">
+      <a href="index.html">Página Inicial</a>
+      <a href="ctrl-estoque.html">Controle de Estoque</a>
+      <a href="add-produto.html">Adicionar Produto</a>
+      <a href="funcionarios.html">Funcionários</a>
+      <a href="vendas.html">Vendas</a>
+      <a href="historico-vendas.html" class="historico">Histórico de Vendas</a>
+    </div>
+    <div class="formulario-vendas">
+      <h2>Formulário de vendas</h2>
+      <form action="">
+        <div class="product">
+          <label id="label-products" for="produtos"
+            >Escolha os produtos:
+          </label>
+          <select name="produtos" id="produtos">
+            <option value="MangaDemon">
+              Mangá Demon Slayer - Kimetsu no Yaiba
+            </option>
+            <option value="DBZ">Mangá Dragon Ball Z # 01</option>
+            <option value="Jojo">
+              Mangá Jojo's Bizarre Adventure - Stardust Crusaders # 01
+            </option>
+            <option value="OnePiece">Mangá One Piece - vol. 1</option>
+            <option value="FairyTail">Mangá Fairy Tail - vol. 17</option>
+          </select>
+          <input type="submit" value="Enviar" />
+        </div>
+        <div class="payment">
+          <label id="money-card" for="">Pagamento: </label>
+          <label for="">Dinheiro</label>
+          <input type="checkbox" name="" id="" />
+          <label for="">Cartão</label>
+          <input type="checkbox" name="" id="" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
