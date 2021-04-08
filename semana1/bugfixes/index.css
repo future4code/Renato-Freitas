@@ -51,6 +51,7 @@ div img {
     border-radius: 5px;
     font-size: 20px;
     color: white;
+    margin-bottom: 60px;
 }
 
 .botao-amarelo:hover {
@@ -64,6 +65,7 @@ div img {
 
 .icone {
     height: 15px;
+    width: 15px;
 }
 
 
@@ -72,12 +74,22 @@ div img {
   *  ESTILOS HOME 
   *
   **/
+
+.main {
+    height: 100%;
+}
+
 .container p {
     display: block;
-    padding-top: 30px;
+    padding-top: 10px;
     margin: 0 auto;
     width: 10%;
 }
+
+.container-comprar {
+    height: 50px;
+}
+
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
@@ -99,6 +111,7 @@ div img {
 
 #msg-comprar {
     display: block;
+    width: 100%;
 }
 
 
@@ -107,6 +120,10 @@ div img {
   *  ESTILOS COMPRAR 
   *
   **/
+#inp-text{
+    border: 0;
+    border-bottom: 2px solid;
+}
 
 div:nth-child(2),
 div:last-child {
