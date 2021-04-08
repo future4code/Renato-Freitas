@@ -30,7 +30,8 @@ img {
 }
 
 div>p:first-child {
-    display: inline;
+    display: block;
+    padding-top: 30px;
 }
 
 div img {
@@ -88,7 +89,6 @@ div img {
 #msg-comprar {
     display: block;
 }
-
 
 /**
   *
