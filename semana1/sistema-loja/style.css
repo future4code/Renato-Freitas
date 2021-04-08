@@ -10,17 +10,28 @@ body{
 }
 
 .logo {
+<<<<<<< HEAD
   margin: 20px;
   padding: 30px;
+=======
+  margin: 30px;
+>>>>>>> 6821190120f292d961a5b2081cffad2f47ee9a16
   padding-left: 20px;
   font-size: 24px;
   font-weight: bold;
 }
+<<<<<<< HEAD
 a {
   text-decoration: none;
 }
 .header a {
   color: black;
+=======
+
+a {
+  color: black;
+  text-decoration: none;
+>>>>>>> 6821190120f292d961a5b2081cffad2f47ee9a16
   font-weight: bold;
   padding-left: 16px;
 }
@@ -36,6 +47,7 @@ a:hover {
   margin-left: 10%;
 }
 #about {
+<<<<<<< HEAD
   margin: 50px 50px;
   width: 30%;
   text-align: justify;
@@ -54,6 +66,13 @@ a:hover {
 .pgn-vendas a{
   color: white;
 }
+=======
+  margin-top: 50px;
+  width: 30%;
+  text-align: justify;
+}
+
+>>>>>>> 6821190120f292d961a5b2081cffad2f47ee9a16
 footer {
   text-align: center;
   width: 100%;
@@ -70,6 +89,7 @@ h2 {
   padding: 20px;
   margin-top: 32px;
 }
+<<<<<<< HEAD
 #title-table {
   text-align: center;
 }
@@ -77,6 +97,12 @@ h2 {
   text-align: center;
   border-collapse: collapse;
   margin: auto;
+=======
+
+.table {
+  border-collapse: collapse;
+  margin: 25px 0;
+>>>>>>> 6821190120f292d961a5b2081cffad2f47ee9a16
   font-size: 16px;
 }
 .table thead th{
@@ -94,7 +120,11 @@ form {
   padding-left: 20px;
   font-weight: bold;
 }
+<<<<<<< HEAD
 .produtos form label {
+=======
+form label {
+>>>>>>> 6821190120f292d961a5b2081cffad2f47ee9a16
   display: block;
 }
 form input {
@@ -102,6 +132,7 @@ form input {
 }
 ol {
   padding-left: 35px;
+<<<<<<< HEAD
 }
 #label-products {
   display: block;
@@ -118,4 +149,6 @@ ol {
 .filtro-venda {
   text-align: center;
   padding: 10px;
+=======
+>>>>>>> 6821190120f292d961a5b2081cffad2f47ee9a16
 }
