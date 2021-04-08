@@ -22,7 +22,12 @@ input {
 }
 
 button:focus {
+    font-weight: bold;
     color: white;
+}
+
+button:hover {
+    background-color: #ff9c1a;
 }
 
 img {
