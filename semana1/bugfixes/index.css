@@ -167,3 +167,8 @@ td button {
 #back-button:hover {
     background-color: #635a3d
 }
+
+#btn-voltar {
+    margin-top: 80px;
+    text-align: center;
+}
