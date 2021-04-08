@@ -10,15 +10,17 @@ body{
 }
 
 .logo {
-  margin: 30px;
+  margin: 20px;
+  padding: 30px;
   padding-left: 20px;
   font-size: 24px;
   font-weight: bold;
 }
-
 a {
-  color: black;
   text-decoration: none;
+}
+.header a {
+  color: black;
   font-weight: bold;
   padding-left: 16px;
 }
@@ -34,11 +36,24 @@ a:hover {
   margin-left: 10%;
 }
 #about {
-  margin-top: 50px;
+  margin: 50px 50px;
   width: 30%;
   text-align: justify;
 }
-
+.pgn-vendas {
+  border: 1px solid white;
+  background: #d25563;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  margin: auto;
+  font-size: 26px;
+  width: 30%;
+  border-radius: 16px;
+}
+.pgn-vendas a{
+  color: white;
+}
 footer {
   text-align: center;
   width: 100%;
@@ -55,10 +70,13 @@ h2 {
   padding: 20px;
   margin-top: 32px;
 }
-
+#title-table {
+  text-align: center;
+}
 .table {
+  text-align: center;
   border-collapse: collapse;
-  margin: 25px 0;
+  margin: auto;
   font-size: 16px;
 }
 .table thead th{
@@ -76,7 +94,7 @@ form {
   padding-left: 20px;
   font-weight: bold;
 }
-form label {
+.produtos form label {
   display: block;
 }
 form input {
@@ -84,4 +102,20 @@ form input {
 }
 ol {
   padding-left: 35px;
+}
+#label-products {
+  display: block;
+}
+#money-card {
+  display: block;
+}
+.product {
+  padding: 20px;
+}
+.formulario-vendas {
+  text-align: center;
+}
+.filtro-venda {
+  text-align: center;
+  padding: 10px;
 }

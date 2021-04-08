@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./img/glasses.png" type="image" />
+  <link rel="stylesheet" href="style.css">
+  <title>Histórico de vendas</title>
+</head>
+<body>
+  <div class="header">
+    <a href="index.html">Página Inicial</a>
+    <a href="ctrl-estoque.html">Controle de Estoque</a>
+    <a href="add-produto.html">Adicionar Produto</a>
+    <a href="funcionarios.html">Funcionários</a>
+    <a href="vendas.html">Vendas</a>
+    <a href="historico-vendas.html" class="historico">Histórico de Vendas</a>
+  </div>
+  <div class="filtro-venda">
+    <h2>Histórico de Vendas</h2>
+    <label for="data">Filtre por data da venda:</label>
+    <input type="date" id="historico" name="historico">
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Horário</th>
+        <th>Funcionário</th>
+        <th>Valor Total (R$)</th>
+        <th>Forma de Pagamento: </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>13:22</td>
+        <td>Mastrogilda</td>
+        <td>69,98</td>
+        <td>Cartão</td>
+      </tr>
+      <tr>
+        <td>10:59</td>
+        <td>Josefina</td>
+        <td>105,28</td>
+        <td>Dinheiro</td>
+      </tr>
+      <tr>
+        <td>15:33</td>
+        <td>Reinaldo</td>
+        <td>62,29</td>
+        <td>Dinheiro</td>
+      </tr>
+      <tr>
+        <td>08:17</td>
+        <td>José</td>
+        <td>19,99</td>
+        <td>Cartão</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</body>
+</html>
