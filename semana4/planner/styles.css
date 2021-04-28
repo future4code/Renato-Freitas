@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font: 16px Arial, Helvetica, sans-serif;
+}
+
+header {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    justify-content: space-evenly;
+    height: 90vh;
+}
+
+.semana {
+    border: 1px dotted rgb(53, 53, 53);
+    width: 14%;
+    padding: 5px;
+}
+.semana h3 {
+    text-align: center;
+}
+#tarefa {
+    background: #EBEBEB;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: 0px;
+}
+#dias-semana {
+    background: #EBEBEB;
+    width: 6rem;
+    padding: 10px;
+    border-radius: 16px;
+    border: 0;
+}
+button {
+    background: #6ba86b;
+    margin: 5px;
+    padding: 12px 24px;
+    border-radius: 1rem;
+    border: 0;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+}
+#btn-limpar {
+    background: red;
+}
+button:hover {
+    background: #88bb88;
+}
+label {
+    font-size: 1.6rem;
+    padding-right: 0.5rem;
+}
