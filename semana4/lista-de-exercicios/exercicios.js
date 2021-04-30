@@ -152,7 +152,9 @@ function filmeFavorito() {
 // Exercício 13
 
 function imprimeChamada() {
-   // implemente sua lógica aqui
+   let filme = filmeFavorito()
+   let atores = filme.atores
+   return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${atores[0]}, ${atores[1]}, ${atores[2]}, ${atores[3]}.`
 }
 
 // Exercício 14
