@@ -89,9 +89,9 @@ function retornaNNumerosPares(n) {
 
 function checaTriangulo(a, b, c) {
    let triangulo = ""
-   if (a === b && a === c && b === c){
+   if (a === b && a === c && b === c) {
       triangulo = "Equilátero"
-   } else if (a === b || a === c || b === c){
+   } else if (a === b || a === c || b === c) {
       triangulo = "Isósceles"
    } else {
       triangulo = "Escaleno"
@@ -102,8 +102,23 @@ function checaTriangulo(a, b, c) {
 // Exercício 9
 
 function comparaDoisNumeros(num1, num2) {
-   // implemente sua lógica aqui
+   let comparador = {
+      maiorNumero: 0,
+      maiorDivisivelporMenor: false,
+      diferenca: 0
+   }
+   if (num1 > num2) {
+      comparador.maiorNumero = num1
+      comparador.maiorDivisivelporMenor = (num1 % num2 === 0)
+      comparador.diferenca = num1 - num2
+   } else {
+      comparador.maiorNumero = num2
+      comparador.maiorDivisivelporMenor = (num2 % num1 === 0)
+      comparador.diferenca = num2 - num1
+   }  
+   return comparador
 }
+
 
 // Exercício 10
 
