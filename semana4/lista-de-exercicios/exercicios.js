@@ -210,19 +210,30 @@ function menoresDe18(arrayDePessoas) {
 // Exercício 17, letra A
 
 function multiplicaArrayPor2(array) {
-   // implemente sua lógica aqui
+   return array.map((numero) => {
+      return numero * 2
+   })
 }
 
 // Exercício 17, letra B
 
 function multiplicaArrayPor2S(array) {
-   // implemente sua lógica aqui
+   return array.map((numero) => {
+      return '' + numero * 3
+   })
 }
 
 // Exercício 17, letra C
 
 function verificaParidade(array) {
-   // implemente sua lógica aqui
+   const string = array.map((numero) => {
+      if (numero % 2 === 0) {
+         return `${numero} é par`
+      } else {
+         return `${numero} é ímpar`
+      }
+   })
+   return string
 }
 
 // Exercício 18
@@ -239,14 +250,22 @@ const pessoas = [
 //Exercício 18, letra A
 
 function retornaPessoasAutorizadas() {
-   // implemente sua lógica aqui
+   return pessoas.filter((pessoa) => {
+      if (pessoa.idade > 14 && pessoa.idade < 60 && pessoa.altura > 1.5) {
+         return true
+      }
+   })
 }
 
 
 // Exercício 18, letra B
 
 function retornaPessoasNaoAutorizadas() {
-   // implemente sua lógica aqui
+   return pessoas.filter((pessoa) => {
+      if (pessoa.idade < 14 || pessoa.idade > 60 || pessoa.altura < 1.5) {
+         return true
+      }
+   })
 }
 
 //Exercício 19
