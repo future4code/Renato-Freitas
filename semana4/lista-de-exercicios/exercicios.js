@@ -74,7 +74,15 @@ function retornaExpressoesBooleanas() {
 //Exercício 7
 
 function retornaNNumerosPares(n) {
-   // implemente sua lógica aqui
+   let numerosPares = []
+   let i = 0
+   while (numerosPares.length !== n) {
+      if (i % 2 === 0) {
+         numerosPares.push(i)
+      }
+      i++
+   }
+   return numerosPares
 }
 
 // Exercício 8
