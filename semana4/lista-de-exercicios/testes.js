@@ -339,8 +339,8 @@ testEx17A()
 // Teste exercício 17B
 
 function testEx17B() {
-  const array = [1, 2, 3, 4, 5, 6]
-  const output = ["3", "6", "9", "12", "15", "18"]
+  const array = [-1, 1, 2, 5, 25, 4]
+  const output = ["-2", "2", "4", "10", "50", "8"]
 
   if (arrayCompare(multiplicaArrayPor2S(array), output)) {
     console.log('%c Você acertou a questão número 17B', 'color: #00FF00')

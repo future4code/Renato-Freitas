@@ -134,7 +134,6 @@ function ordenaArray(array) {
       if (a > b) return 1;
       return 0;
    })
-   return array
 }
 
 // Exercício 12
@@ -219,7 +218,7 @@ function multiplicaArrayPor2(array) {
 
 function multiplicaArrayPor2S(array) {
    return array.map((numero) => {
-      return '' + numero * 3
+      return '' + numero * 2
    })
 }
 
@@ -280,7 +279,7 @@ const consultasNome = [
 //Exercício 19, letra A
 
 function ordenaPorNome() {
-
+   return consultasNome.sort()
 }
 
 // Exercício 19, letra B
@@ -293,7 +292,7 @@ const consultasData = [
 ]
 
 function ordenaPorData() {
-
+   // implemente sua lógica aqui   
 }
 
 //Exercício 20
@@ -308,5 +307,11 @@ const contas = [
 ]
 
 function atualizaSaldo() {
-   // implemente sua lógica aqui
+   contas.forEach(conta => {
+      const gastos = conta.compras.reduce((val, elem) => { 
+         return val + elem 
+      }, 0)
+      conta.saldoTotal -= gastos
+   })
+   return contas
 }
