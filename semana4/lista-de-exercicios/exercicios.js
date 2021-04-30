@@ -115,15 +115,15 @@ function comparaDoisNumeros(num1, num2) {
       comparador.maiorNumero = num2
       comparador.maiorDivisivelporMenor = (num2 % num1 === 0)
       comparador.diferenca = num2 - num1
-   }  
+   }
    return comparador
 }
-
 
 // Exercício 10
 
 function segundoMaiorEMenor(array) {
-   // implemente sua lógica aqui
+   array.sort((x, y) => { return x - y })
+   return [array[array.length - 2], array[1]]
 }
 
 //Exercício 11
