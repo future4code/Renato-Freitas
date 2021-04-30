@@ -14,12 +14,12 @@ function inverteArray(array) {
 //Exercício 2
 
 function retornaNumerosParesElevadosADois(array) {
-   let numerosPares = array.filter((numero) =>{
-      if (numero % 2 === 0){
+   let numerosPares = array.filter((numero) => {
+      if (numero % 2 === 0) {
          return true;
       }
    })
-   let aoQuadrado = numerosPares.map((numero) =>{
+   let aoQuadrado = numerosPares.map((numero) => {
       return numero * numero
    })
    return aoQuadrado
@@ -28,8 +28,8 @@ function retornaNumerosParesElevadosADois(array) {
 //Exercício 3
 
 function retornaNumerosPares(array) {
-   let numerosPares = array.filter((numero) =>{
-      if (numero % 2 === 0){
+   let numerosPares = array.filter((numero) => {
+      if (numero % 2 === 0) {
          return true;
       }
    })
@@ -57,7 +57,18 @@ function retornaQuantidadeElementos(array) {
 //Exercício 6
 
 function retornaExpressoesBooleanas() {
-   // implemente sua lógica aqui
+   const booleano1 = true
+   const booleano2 = false
+   const booleano3 = !booleano2
+   const booleano4 = !booleano3
+   const respostas = [
+      booleano1 && booleano2 && !booleano4,
+      (booleano1 && booleano2) || !booleano3,
+      (booleano2 || booleano3) && (booleano4 || booleano1),
+      !(booleano2 && booleano3) || !(booleano1 && booleano3),
+      !(booleano1) && !(booleano3) || (!booleano4 && booleano3 && booleano3)
+   ]
+   return respostas
 }
 
 //Exercício 7
