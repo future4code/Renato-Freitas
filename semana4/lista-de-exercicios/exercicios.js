@@ -14,7 +14,15 @@ function inverteArray(array) {
 //Exercício 2
 
 function retornaNumerosParesElevadosADois(array) {
-   // implemente sua lógica aqui
+   let numerosPares = array.filter((numero) =>{
+      if (numero % 2 === 0){
+         return true;
+      }
+   })
+   let aoQuadrado = numerosPares.map((numero) =>{
+      return numero * numero
+   })
+   return aoQuadrado
 }
 
 //Exercício 3
