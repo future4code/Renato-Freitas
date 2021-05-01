@@ -279,8 +279,20 @@ const consultasNome = [
 //Exercício 19, letra A
 
 function ordenaPorNome() {
-   return consultasNome.sort()
+   function ordenaPorNome() {
+      for(let i = 0; i < consultasNome.length; i++) {
+        for(let j = 0; j < consultasNome.length - i - 1; j++) {
+          if(consultasNome[j].nome > consultasNome[j + 1].nome) {
+            const temp = consultasNome[j]
+            consultasNome[j] = consultasNome[j + 1]
+            consultasNome[j + 1] = temp
+          }
+        }
+      }
+      return consultasNome      
+    }
 }
+console.log(ordenaPorNome(consultasNome))
 
 // Exercício 19, letra B
 
@@ -292,7 +304,32 @@ const consultasData = [
 ]
 
 function ordenaPorData() {
-   // implemente sua lógica aqui   
+   function ordenaPorData() {
+      for(let i = 0; i < consultasData.length; i++) {
+        for(let j = 0; j < consultasData.length - i - 1; j++) {
+    
+          const arrayData1 = consultasData[j].dataDaConsulta.split('/')
+          const dia1 = Number(arrayData1[0])
+          const mes1 = Number(arrayData1[1])
+          const ano1 = Number(arrayData1[2])
+    
+          const arrayData2 = consultasData[j + 1].dataDaConsulta.split('/')
+          const dia2 = Number(arrayData2[0])
+          const mes2 = Number(arrayData2[1])
+          const ano2 = Number(arrayData2[2])
+    
+          const data1 = new Date(ano1, mes1 -1, dia1).getTime()
+          const data2 = new Date(ano2, mes2-1, dia2).getTime()
+    
+          if(data1 > data2) {
+            const temp = consultasData[j]
+            consultasData[j] = consultasData[j + 1]
+            consultasData[j + 1] = temp
+          }
+        }
+      }
+      return consultasData
+    }
 }
 
 //Exercício 20
