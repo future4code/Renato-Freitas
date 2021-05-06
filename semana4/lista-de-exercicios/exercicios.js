@@ -279,11 +279,9 @@ const consultasNome = [
 //Exercício 19, letra A
 
 function ordenaPorNome() {
-<<<<<<< HEAD
    return consultasNome.sort()
 }
-=======
-   function ordenaPorNome() {
+ function ordenaPorNome() {
       for(let i = 0; i < consultasNome.length; i++) {
         for(let j = 0; j < consultasNome.length - i - 1; j++) {
           if(consultasNome[j].nome > consultasNome[j + 1].nome) {
@@ -297,7 +295,6 @@ function ordenaPorNome() {
     }
 }
 console.log(ordenaPorNome(consultasNome))
->>>>>>> dcfc6b0f2162eb60a46581b3a75749e846b27950
 
 // Exercício 19, letra B
 
