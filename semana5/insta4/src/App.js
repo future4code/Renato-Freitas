@@ -9,25 +9,11 @@ const MainContainer = styled.div`
   align-items: center;
 `
 
-class App extends React.Component {
+class App extends React.Component {  
   render() {
     return (
       <MainContainer>
-        <Post
-          nomeUsuario={'paulinha'}
-          fotoUsuario={'https://picsum.photos/50/50'}
-          fotoPost={'https://picsum.photos/200/150'}
-        />
-        <Post
-          nomeUsuario={'Renato'}
-          fotoUsuario={'https://picsum.photos/50/49'}
-          fotoPost={'https://picsum.photos/200/149'}
-        />
-        <Post
-          nomeUsuario={'Caio'}
-          fotoUsuario={'https://picsum.photos/50/48'}
-          fotoPost={'https://picsum.photos/200/148'}
-        />
+        <Post />
       </MainContainer>
     );
   }
