@@ -1,8 +1,8 @@
 import React from "react";
 import { ContainerPlayList } from "./styled";
 import axios from "axios";
-import { NotificationManager } from 'react-notifications';
-import 'react-toastify/dist/ReactToastify.css'
+import swal from "sweetalert";
+import { Link } from "react-router-dom";
 
 export const BASE_URL =
   "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists";
@@ -25,12 +25,17 @@ export default class PlayList extends React.Component {
         name: this.state.inputNamePlaylist
       };
       const res = await axios.post(BASE_URL, body, header);
-      console.log("playlist adicionada!")
-      NotificationManager.success('Playlist adicionada com sucesso!')
+      swal("", "Sua playlist foi criada!", "success", {
+        button: false,
+        timer: 2000
+      });
     } catch (err) {
-      console.log(err);
-      NotificationManager.error('Falha ao adicionar a playlist')
+      swal("Houve um erro", "Tente outro nome", "error", {
+        button: false,
+        timer: 2000
+      });
     }
+    this.setState({ inputNamePlaylist: "" });
   };
   render() {
     return (
@@ -44,7 +49,9 @@ export default class PlayList extends React.Component {
           placeholder="Dê um título a sua playlist"
         />
         <button onClick={this.createPlaylist}>Criar nova</button>
-        <button>Ver playlists</button>
+        <Link to="/playlists">
+          <button>Ver playlists</button>
+        </Link>
       </ContainerPlayList>
     );
   }

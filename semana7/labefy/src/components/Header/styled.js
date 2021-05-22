@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const Logo = styled.h1`
+  display: flex;
+  justify-content: center;
   font-size: 3.5rem;
-  margin-top: 10rem;
+  margin: 5rem 0;
   animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.61, 0.355, 1)
     both;
   @keyframes tracking-in-contract-bck {
