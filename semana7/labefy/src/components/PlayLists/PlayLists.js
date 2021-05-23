@@ -29,9 +29,23 @@ export default class PlayLists extends React.Component {
   componentDidMount() {
     this.getAllPlaylist();
   }
-  componentWillUpdate() {
+  componentDidUpdate() {
     this.getAllPlaylist();
   }
+
+  addTrackToPlayList = async (playlistId) => {
+    try {
+      const body = {
+        name: this.state.name,
+        artist: this.state.artist,
+        url: this.state.url
+      };
+      await axios.post(`${BASE_URL}/${playlistId}/tracks`, body, header);
+      this.setState({ name: "", artist: "", url: "" });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   deletePlaylist = (playlistId) => {
     axios
@@ -60,7 +74,7 @@ export default class PlayLists extends React.Component {
     const playlists = this.state.playlists.map((playlist) => {
       return (
         <p key={playlist.id}>
-          <Link to={`/playlists/musicas`}>
+          <Link to={`/playlists/${playlist.id}`}>
             <button>
               <MdFolderOpen size={20} />
             </button>

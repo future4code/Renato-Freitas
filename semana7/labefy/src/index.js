@@ -11,7 +11,7 @@ ReactDOM.render(
     <Switch>
       <Route path="/" exact component={App} />
       <Route path="/playlists" exact component={PlayLists} />
-      <Route path="/playlists/musicas" exact component={PlayListsTracks} />
+      <Route path="/playlists/:playlistId" exact component={PlayListsTracks} />
     </Switch>
   </BrowserRouter>,
   rootElement

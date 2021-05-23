@@ -61,3 +61,40 @@ export const Musics = styled.div`
     }
   }
 `;
+export const ListMusic = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    margin-bottom: 1rem;
+  }
+  div {
+    background: #242528;
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid gray;
+    border-radius: 0.8rem;
+    margin: 1rem;
+    align-items: center;
+    overflow: hidden;
+    audio {
+      width: 20vw;
+      height: 3vh;
+    }
+    p {
+      padding: 1rem;
+      span {
+        display: block;
+        font-size: 1.3rem;
+      }
+    }
+    button {
+      margin: 0 1rem;
+      color: white;
+      background: transparent;
+      border: none;
+    }
+  }
+`;
