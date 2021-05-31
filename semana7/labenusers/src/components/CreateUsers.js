@@ -29,12 +29,12 @@ export default class CreateUsers extends React.Component {
     inputEmail: ""
   }
   handleName = (event) => {
-    this.setState({ inputName: event.target.value})
+    this.setState({ inputName: event.target.value })
   }
   handleEmail = (event) => {
-    this.setState({ inputEmail: event.target.value})
+    this.setState({ inputEmail: event.target.value })
   }
-  addNewUser = () => {
+  addNewUser = async() => {
     const url = "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users"
     const header = {
       headers: {
@@ -45,7 +45,7 @@ export default class CreateUsers extends React.Component {
       name: this.state.inputName,
       email: this.state.inputEmail
     }
-    axios.post(url, body, header)
+    /* axios.post(url, body, header)
     .then((res) => {
       alert('Usuário cadastrado com sucesso!')
       this.setState({ 
@@ -55,9 +55,18 @@ export default class CreateUsers extends React.Component {
     })
     .catch((err) => {
       alert(err)
-    })
+    }) */
+    try {
+      const res = await axios.post(url, body, header)
+        alert('Usuário cadastrado com sucesso!')
+        this.setState({
+          inputName: "",
+          inputEmail: ""
+        })
+    } catch(err) {
+        alert(err)
+    }
   }
-
   render() {
     return (
       <Content>

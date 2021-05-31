@@ -11,6 +11,8 @@ const Lista = styled.div`
     ul {
       list-style-type: none;
       li {
+        border: 1px solid;
+        padding: 1rem;
         button {
           margin-left: 2rem;
         }
@@ -27,20 +29,26 @@ export default class ListUsers extends React.Component {
     this.getAllUsers();
   }
 
-  getAllUsers = () => {
+  getAllUsers = async() => {
     const url = "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users"
     const header = {
       headers: {
         Authorization: "renato-freitas-paiva"
       }
     }
-    axios.get(url, header)
+    /* axios.get(url, header)
       .then((res) => {
         this.setState({ usuarios: res.data })
       })
       .catch((err) => {
         alert(err)
-      })
+      }) */
+      try {
+        const res = await axios.get(url, header)
+          this.setState({ usuarios: res.data })
+      } catch (err) {
+          alert(err)
+      }
   }
   deleteUser = (id) => {
     const header = {
@@ -64,7 +72,7 @@ export default class ListUsers extends React.Component {
       return (
         <div key={user.id}>
           <ul>
-            <li>{user.name} <button onClick={() => this.deleteUser(user.id)}>Deletar</button> </li>            
+            <li>{user.name} <button onClick={() => this.deleteUser(user.id)}>X</button> </li>            
           </ul>
         </div>
       );
