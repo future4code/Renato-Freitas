@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  background: #BFC8AD;
+`;
+
 export const Load = styled.div`
   height: 2rem;
   animation: rotate-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite

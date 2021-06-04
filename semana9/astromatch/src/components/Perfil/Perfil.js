@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Header from "../Header/Header";
 import Buttons from "../Buttons/Buttons";
-import { Load, Load2 } from "./styled";
+import { Container, Load, Load2 } from "./styled";
 import { SiTinder } from "react-icons/si";
 import { urlGetProfile, urlChoosePerson } from "../../services/api";
 
@@ -19,7 +18,7 @@ const Perfil = (props) => {
       const res = await axios.get(urlGetProfile);
       setProfile(res.data.profile);
     } catch (err) {
-      console.log(err);
+      alert(err.message);
     }
   };
 
@@ -44,11 +43,10 @@ const Perfil = (props) => {
   };
 
   return (
-    <div className="flex flex-wrap flex-col rounded-xl justify-center items-center">
-      <Header />
+    <Container className="flex flex-col rounded-xl justify-center items-center m-auto p-16 w-full">
       {profile.photo ? (
         <img
-          className="rounded w-64 h-60"
+          className="rounded w-64 h-60 shadow"
           src={profile.photo}
           alt="foto de perfil"
         />
@@ -71,7 +69,7 @@ const Perfil = (props) => {
       ) : (
         <Load2>Carregando..</Load2>
       )}
-    </div>
+    </Container>
   );
 };
 export default Perfil;
