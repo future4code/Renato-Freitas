@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Header from "../components/Header/Header";
-import { Load2 } from '../components/Perfil/styled'
+import { FaHeartBroken } from "react-icons/fa";
 import { urlGetMatches, urlClear } from "../services/api";
 import {Container} from '../css/style'
 
@@ -38,19 +38,18 @@ const Matchs = (props) => {
       </li>
     )
   });
+  console.log(listaMatch.length)
 
   return (
     <Container className="flex flex-col items-center w-40 m-auto my-16 shadow rounded-lg">
       <Header />
-      <h1 className="mt-8">Matches</h1>
-      {{listaMatch} ? (
-        <ul>{listaMatch}</ul> 
-
-      ) : (
-        <Load2>Carregando..</Load2>
-      )}
+      <h1 className="mt-8">Matches</h1> 
+      {listaMatch.length === 0 ? <p className="text-gray-600 flex">Você não tem nenhum match.. <FaHeartBroken className="text-red-700"/> </p> : null}
+      <ul>
+        {listaMatch}
+      </ul>
       <button className="text-white font-bold rounded-full bg-red-400 my-4 p-4 hover:bg-red-300" onClick={clearMatch}>
-        Apagar tudo!!
+        Apagar matches
       </button>
     </Container>
   );
