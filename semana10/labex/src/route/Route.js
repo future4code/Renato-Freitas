@@ -20,7 +20,7 @@ const RouteManager = () => {
           component={ApplicationFormPage}
         />
         <Route exact path="/login" component={LoginPage} />
-        <Route exact path="/admin-painel" component={AdminHomePage} />
+        <Route exact path="/admin/trips/list" component={AdminHomePage} />
         <Route
           exact
           path="/admin-painel/detalhes"
