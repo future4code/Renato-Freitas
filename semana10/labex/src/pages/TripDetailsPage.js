@@ -3,8 +3,9 @@ import axios from "axios";
 import useProtectedPage from "../hooks/useProtectedPage";
 import { BASE_URL } from "../constants/urls";
 
-function TripDetailsPage() {
+function TripDetailsPage(props) {
   const [trip, setTrip] = useState({});
+  const tripId = props.match.params.id
 
   useProtectedPage();
 
@@ -22,7 +23,7 @@ function TripDetailsPage() {
   };
 
   useEffect(() => {
-    getTripDetail("0FlrxGY3SWsSDyuNVl8s");
+    getTripDetail(tripId);
   }, []);
 
   return (

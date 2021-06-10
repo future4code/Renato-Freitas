@@ -23,7 +23,7 @@ const RouteManager = () => {
         <Route exact path="/admin/trips/list" component={AdminHomePage} />
         <Route
           exact
-          path="/admin-painel/detalhes"
+          path="/admin/trips/:id"
           component={TripDetailsPage}
         />
         <Route
