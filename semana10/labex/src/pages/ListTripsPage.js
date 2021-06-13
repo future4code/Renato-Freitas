@@ -1,7 +1,48 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { BASE_URL } from "../constants/urls";
+import useRequestData from "../hooks/useRequestData";
 
 function ListTripsPage() {
+  const viagens = useRequestData([], `${BASE_URL}/trips`);
+
+  const listTrips =
+    viagens.trips &&
+    viagens.trips.map((trip) => {
+      return (
+        <div className="m-2 lg:w-4/12 lg:mr-7 lg:mb-0 mb-7 bg-white p-6 shadow rounded">
+          <div className="flex items-center border-b border-gray-200 pb-6">
+            <img
+              src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=827&q=80"
+              alt="planeta"
+              className="w-12 h-12 rounded-full"
+            />
+            <div className="flex items-start justify-between w-full">
+              <div className="pl-3 w-full">
+                <p className="text-xl font-medium leading-5 text-gray-800">
+                  {trip.name}
+                </p>
+                <p className="text-sm leading-normal pt-2 text-gray-500">
+                  {trip.planet}
+                </p>                
+                <p className="text-sm leading-normal pt-2 text-gray-500">
+                  Duração: {trip.durationInDays} dias.
+                </p>
+                <p className="text-sm leading-normal pt-2 text-gray-500">
+                  Data: {trip.date}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="px-2">
+            <p className="text-sm leading-5 py-4 text-gray-600">
+              {trip.description}
+            </p>
+          </div>
+        </div>
+      );
+    });
+
   return (
     <div className="mt-10 lg:mt-32 mx-auto container">
       <h1 className="lg:text-5xl text-2xl text-center f-m-w font-bold">
@@ -25,51 +66,9 @@ function ListTripsPage() {
           </button>
         </Link>
       </div>
-      <div className="py-8 h-full lg:flex items-center justify-between xl:px-0 px-4">
-        <div className="h-full lg:w-1/3 lg:mr-8 lg:mb-0 mb-4">
-          <div className="w-full h-96 relative">
-            <div className="left-0 px-3 flex items-cente mb-3 justify-between bottom-0 w-full absolute z-20 pt-4"></div>
-          </div>
-          <div className="mt-12 shadow p-2">
-            <h1 className="f-m-m text-2xl font-semibold leading-7">
-              Sydney, Australia
-            </h1>
-            <p className="text-base f-m-m leading-loose mt-2">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. It has survived not only five centuries. Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry.
-            </p>
-          </div>
-        </div>
-        <div className="h-full lg:w-1/3 lg:mr-8 lg:mb-0 mb-4">
-          <div className="w-full h-96 relative">
-            <div className="left-0 px-3 flex items-center mb-3 justify-between bottom-0 w-full absolute z-20 pt-4"></div>
-          </div>
-          <div className="mt-12 shadow p-2">
-            <h1 className="f-m-m text-2xl font-semibold leading-7">
-              New York, USA
-            </h1>
-            <p className="text-base f-m-m leading-loose mt-2">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. It has survived not only five centuries. Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry.
-            </p>
-          </div>
-        </div>
-        <div className="h-full lg:w-1/3 lg:mr-8 lg:mb-0 mb-4">
-          <div className="w-full h-96 relative">
-            <div className="left-0 px-3 flex items-center mb-3 justify-between bottom-0 w-full absolute z-20 pt-4"></div>
-          </div>
-          <div className="mt-12 shadow p-2">
-            <h1 className="f-m-m text-2xl font-semibold leading-7">
-              Sydney, Australia
-            </h1>
-            <p className="text-base f-m-m leading-loose mt-2">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. It has survived not only five centuries. Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry.
-            </p>
-          </div>
+      <div className="py-8 w-full">
+        <div className="flex flex-wrap m-2 items-center justify-center w-full">
+          {listTrips}
         </div>
       </div>
     </div>

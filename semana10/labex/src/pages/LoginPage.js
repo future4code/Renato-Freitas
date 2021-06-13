@@ -16,7 +16,6 @@ function LoginPage() {
     axios
       .post(`${BASE_URL}/login`, form)
       .then((res) => {
-        console.log(res);
         localStorage.setItem("token", res.data.token);
         history.push("/admin/trips/list");
       })

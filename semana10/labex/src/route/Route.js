@@ -28,7 +28,7 @@ const RouteManager = () => {
         />
         <Route
           exact
-          path="/admin-painel/criar-viagem"
+          path="/admin/trips-create"
           component={CreateTripPage}
         />
       </Switch>
