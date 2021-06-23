@@ -1,9 +1,11 @@
 import React from "react";
-import RouteManager from "./route/Route";
+import RouteManager from "./routes/Route";
+import { GlobalStyle } from "./globalStyles/GlobalStyles";
 
 function App() {
   return (
     <div>
+      <GlobalStyle />
       <RouteManager />
     </div>
   );
