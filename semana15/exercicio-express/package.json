@@ -1,0 +1,12 @@
+{
+   "name": "express-api-template",
+   "version": "1.0.0",
+   "main": "index.js",
+   "scripts": {
+      "start": "tsc && node build/index.js"
+   },
+   "license": "ISC",
+   "devDependencies": {
+      "typescript": "^4.3.5"
+   }
+}
