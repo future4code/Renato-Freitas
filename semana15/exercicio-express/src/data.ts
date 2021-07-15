@@ -1,5 +1,6 @@
 import { country, CONTINENTS } from "./types";
 
+
 export const countries: country[] = [
    {
       "id": 0,
