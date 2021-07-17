@@ -8,7 +8,9 @@ class ListAccountUseCase {
 
   execute(): Account[] {
     const accounts = this.accountsRepository.list();
-
+    if (!accounts.length) {
+      throw new Error("No accounts have been registered");
+    }
     return accounts;
   }
 

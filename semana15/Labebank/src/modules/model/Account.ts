@@ -7,7 +7,7 @@ class Transaction {
 class Account {
   name: string;
   cpf: string;
-  dbirth: string;
+  dbirth: Date;
   balance?: number;
   statement: Transaction[] = [];
 

@@ -3,7 +3,7 @@ import { IAccountRepository } from "../../repositories/IAccountRepository";
 interface IRequest {
   name: string;
   cpf: string;
-  dbirth: string;
+  dbirth: Date;
 }
 
 class CreateAccountUseCase {

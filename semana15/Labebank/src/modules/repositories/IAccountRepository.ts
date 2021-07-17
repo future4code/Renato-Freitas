@@ -3,7 +3,7 @@ import { Account } from "../model/Account";
 interface ICreateAccountDTO {
   name: string;
   cpf: string;
-  dbirth: string;
+  dbirth: Date;
 }
 
 interface IAccountRepository {
