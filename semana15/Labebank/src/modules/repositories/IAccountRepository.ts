@@ -8,6 +8,7 @@ interface ICreateAccountDTO {
 
 interface IAccountRepository {
   findByCpf(cpf: string): Account;
+  list(): Account[];
   create(account: ICreateAccountDTO): void;
 }
 
