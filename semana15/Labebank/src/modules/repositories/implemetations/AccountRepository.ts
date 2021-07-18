@@ -36,6 +36,13 @@ class AccountRepository implements IAccountRepository {
     const account = this.accounts.find(account => account.cpf === cpf);
     return account;
   }
+  // verifyAge(date: string): any {
+  //   const [day, month, year] = date.split('/');
+  //   const dbirth: Date = new Date(`${year}-${month}-${day}`);
+  //   const ageInMilliseconds: number = Date.now() - dbirth.getTime();
+  //   const ageInYears: number = Math.floor(ageInMilliseconds / (1000 * 60 * 60 * 24 * 365));
+  //   return ageInYears;
+  // } 
 }
 
 export { AccountRepository }
