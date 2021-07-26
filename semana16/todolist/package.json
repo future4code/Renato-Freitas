@@ -1,26 +1,30 @@
 {
-  "name": "aula-knex",
+  "name": "projeto-to-do",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "src/index.ts",
   "scripts": {
-    "start": "tsc && node ./build/index.js",
-    "dev-start": "ts-node-dev ./src/index.ts"
+    "start": "ts-node-dev ./src/index.ts"
   },
-  "author": "Labenu",
-  "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "knex": "^0.95.2",
-    "mysql": "^2.18.1"
+    "@types/dotenv-webpack": "7.0.3",
+    "@types/express": "4.17.13",
+    "@types/node": "16.4.3",
+    "body-parser": "1.19.0",
+    "cors": "2.8.5",
+    "dotenv": "10.0.0",
+    "express": "4.17.1",
+    "knex": "0.95.8",
+    "moment": "2.29.1",
+    "ts-node-dev": "1.1.8",
+    "typescript": "4.3.5"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.10",
-    "@types/express": "^4.17.11",
-    "@types/knex": "^0.16.1",
-    "@types/node": "^14.14.35",
-    "ts-node-dev": "^1.1.6",
-    "typescript": "^4.2.3"
-  }
+    "nodemon": "2.0.0",
+    "@types/node": "12.12.11",
+    "@types/express": "4.17.6",
+    "ts-node": "8.5.2",
+    "typescript": "3.7.2"
+  },
+  "keywords": []
 }
