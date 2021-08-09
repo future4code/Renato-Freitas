@@ -5,3 +5,7 @@ export type user = {
    name: string
    nickname: string
 }
+
+export interface AuthenticationData {
+   id: string
+}

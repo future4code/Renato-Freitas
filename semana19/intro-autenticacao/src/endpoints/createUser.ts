@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import connection from "../connection";
 import { user } from "../types";
+import { generateId } from '../services/generateId'
 
 export default async function createUser(
    req: Request,
@@ -23,9 +24,11 @@ export default async function createUser(
          throw new Error('Email já cadastrado')
       }
 
-      const id: string = Date.now().toString()
+      const id: string = generateId();
+
 
       const newUser: user = { id, name, nickname, email, password }
+
 
       await connection('to_do_list_users')
          .insert(newUser)
