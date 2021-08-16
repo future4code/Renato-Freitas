@@ -5,6 +5,8 @@ import dotenv from 'dotenv'
 import { signupController } from './controller/users/signupController'
 import { loginController } from './controller/users/loginController'
 import { getAllUsersController } from './controller/users/getAllUsersController'
+import { deleteUser } from './data/users/deleteUser'
+import { deleteUserController } from './controller/users/deleUserController'
 
 
 dotenv.config()
@@ -36,7 +38,7 @@ app.listen(3003, () => {
 })
 
 app.post("/signup", signupController)
-
 app.post("/login", loginController)
-
 app.get("/all", getAllUsersController)
+app.delete("/:id", deleteUserController)
+
