@@ -2,6 +2,8 @@ import express from 'express'
 import knex from 'knex'
 import cors from 'cors'
 import dotenv from 'dotenv'
+import { signupController } from './controller/users/signupController'
+import { loginController } from './controller/users/loginController'
 
 
 dotenv.config()
@@ -32,3 +34,6 @@ app.listen(3003, () => {
    console.log('Servidor rodando na porta 3003')
 })
 
+app.post("/signup", signupController)
+
+app.post("/login", loginController)
