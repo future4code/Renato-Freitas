@@ -4,6 +4,7 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import { signupController } from './controller/users/signupController'
 import { loginController } from './controller/users/loginController'
+import { getAllUsersController } from './controller/users/getAllUsersController'
 
 
 dotenv.config()
@@ -37,3 +38,5 @@ app.listen(3003, () => {
 app.post("/signup", signupController)
 
 app.post("/login", loginController)
+
+app.get("/all", getAllUsersController)
