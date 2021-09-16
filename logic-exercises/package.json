@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify Exercises/Aula71/desafios/exercise05.ts",
+    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify Exercises/Aula71/desafios/exercise06.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
